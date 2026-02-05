@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="500" height="500" alt="icon-highres" src="https://github.com/user-attachments/assets/c69ae20c-566e-4201-8695-56bc2403ec20" />
+  <img width="420" height="420" alt="icon-highres" src="https://github.com/user-attachments/assets/c69ae20c-566e-4201-8695-56bc2403ec20" />
 </p>
 
 This version (1.1) of the Polar Highlighter is developed for Mozilla Firefox (v147).
@@ -10,3 +10,8 @@ Due to github space limitations, the ONNX [model download](https://huggingface.c
 
 To enable the extension, navigate to `about:debugging` in firefox, select "This Firefox", and
 "Load Temporary Add-on..." by selecting the `manifest.json` of this extension.
+
+---
+
+# System Overview
+<img width="1619" height="807" alt="image" src="https://github.com/user-attachments/assets/68a06796-e448-41a1-9754-dbc3001b9240" />
