@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="500" height="500" alt="icon-highres" src="https://github.com/user-attachments/assets/c69ae20c-566e-4201-8695-56bc2403ec20" />
+</p>
+
 This version (1.1) of the Polar Highlighter is developed for Mozilla Firefox (v147).
 
 # Installation
