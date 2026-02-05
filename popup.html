@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 200px;
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        /* Status Section - Centered and Bold */
+        #status-container {
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+
+        #status-text {
+            font-weight: bold;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .engine-ready {
+            color: #2e7d32;
+        }
+
+        /* Bold Green */
+        .engine-loading {
+            color: #6a1b9a;
+        }
+
+        /* Polar Purple */
+        .engine-offline {
+            color: #d32f2f;
+        }
+
+        /* Red */
+
+        /* The Switch Styling (Polar Purple) */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #D1B3FF;
+            /* Polar Purple */
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Spinner for loading and processing */
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #D1B3FF;
+            /* Polar Purple */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setting-row">
+        <span style="font-weight: 500;">Highlighting</span>
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="setting-row">
+        <span style="font-weight: 500;">Smooth Mode (slower)</span>
+        <label class="switch">
+            <input type="checkbox" id="speedToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div id="status-container">
+        <div id="status-icon-wrapper"></div>
+        <p id="status-text">Checking Model...</p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

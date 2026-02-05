@@ -1,0 +1,31 @@
+mark.queued-highlight {
+    background-color: #E6D8FF !important;
+    color: #444 !important;
+}
+
+mark.thinking-highlight {
+    color: #000 !important;
+    animation: breathingPurple 0.250s infinite ease-in-out !important;
+}
+
+@keyframes breathingPurple {
+    0% {
+        background-color: #D1B3FF;
+    }
+
+    50% {
+        background-color: #B380FF;
+    }
+
+    100% {
+        background-color: #D1B3FF;
+    }
+}
+
+mark.polar-highlight {
+    background-color: #FFB3B3 !important;
+}
+
+mark.neutral-highlight {
+    background-color: #CCEEFF !important;
+}
